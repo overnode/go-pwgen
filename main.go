@@ -16,7 +16,6 @@ func main() {
 	uc := flag.Bool("uc", true, "Uppercase letters")
 	num := flag.Bool("num", true, "Numbers")
 	special := flag.Bool("symbol", false, "Symbols")
-	// showDuration := flag.Bool("dur", false, "Show duration of password generation")
 	writeToFile := flag.String("f", "", "Write to specified filename")
 
 	flag.Parse()

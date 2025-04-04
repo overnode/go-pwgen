@@ -17,6 +17,7 @@ func main() {
 	num := flag.Bool("num", true, "Numbers")
 	special := flag.Bool("symbol", false, "Symbols")
 	writeToFile := flag.String("f", "", "Write to specified filename")
+	verbose := flag.Bool("v", false, "Verbose output")
 
 	flag.Parse()
 
@@ -45,8 +46,10 @@ func main() {
 	}
 	timeStop := time.Now()
 
-	fmt.Println("---")
-	fmt.Printf("Duration %s\n", timeStop.Sub(timeStart))
+	if verbose != nil && *verbose {
+		fmt.Println("---")
+		fmt.Printf("Duration %s\n", timeStop.Sub(timeStart))
+	}
 }
 
 type RandomStringParameters struct {
